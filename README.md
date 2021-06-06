@@ -1,6 +1,6 @@
 # Benford's Law in Python
 
-Each folder has a main.py and benford.png file
+Each folder has a ``main.py`` and ``benford.png`` file
 
 To see Benford's Law in World Population Data, check out ```population/benford.png```
 
