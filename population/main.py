@@ -45,7 +45,7 @@ ax.legend(shadow=True, ncol=2)
 plt.xticks(x)
 
 # Labels
-plt.xlabel("Leading Digit of Population")
+plt.xlabel("Leading Digit")
 plt.ylabel("Percentage of Occurence")
 plt.title("Benford's Law and World Population", fontsize=20)
 
