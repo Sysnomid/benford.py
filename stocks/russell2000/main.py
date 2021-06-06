@@ -5,9 +5,9 @@ import math
 import matplotlib.pyplot as plt
 import datetime
 
-df = pd.read_csv("s&p500.csv", usecols=['Symbol'])
+df = pd.read_csv("russell2000.csv", usecols=['Ticker'])
 
-sandp_500_list = []
+russell_2000_list = []
 bfd_data = []
 bfd_occurences = []
 bfd_natural = []
@@ -15,9 +15,9 @@ bfd_natural = []
 
 for index, row in df.iterrows():
     # Fetch data from 'Symbol' column in CSV column, and cast it to an int type
-    sandp_500_list.append(df['Symbol'][index])
+    russell_2000_list.append(df['Ticker'][index])
    
-stock_data = yf.download(tickers = " ".join(sandp_500_list), period = "1d")
+stock_data = yf.download(tickers = " ".join(russell_2000_list), period = "1d")
 stock_data_close = stock_data['Close'].to_string(index=False, header=False).replace("\n", " ").split(" ")
 
 for i in range(len(stock_data_close)):
@@ -44,7 +44,7 @@ fig = plt.figure(figsize=(15,10))
 # Legend and Multiple Bar Graphs
 ax = plt.subplot(111)
 ax.bar(x-0.2, np.array(bfd_natural).flatten().astype(float).tolist(), width, label="Benford's Law")
-ax.bar(x+0.2, bfd_occurences, width, label='S&P 500 Component Closing Prices')
+ax.bar(x+0.2, bfd_occurences, width, label='Russell 2000 Component Closing Prices')
 ax.legend(shadow=True, ncol=2)
 
 # Set x axis to every available x value
@@ -53,6 +53,6 @@ plt.xticks(x)
 # Labels
 plt.xlabel("Leading Digit")
 plt.ylabel("Percentage of Occurence")
-plt.title(f"Benford's Law and S&P 500 Component Closing Prices of {datetime.date.today().strftime('%Y-%m-%d')}", fontsize=20)
+plt.title(f"Benford's Law and Russell 2000 Component Closing Prices of {datetime.date.today().strftime('%Y-%m-%d')}", fontsize=20)
 
 plt.savefig("benford.png") 
