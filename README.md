@@ -31,7 +31,7 @@ For example, if you want a plot of Benford's law in world population data run `p
   
 ![](https://raw.githubusercontent.com/Sysnomid/benford.py/main/plots/population.png)
 
-![](https://raw.githubusercontent.com/Sysnomid/benford.py/main/plots/s%26p500)
+![](https://raw.githubusercontent.com/Sysnomid/benford.py/main/plots/s%26p500.png)
     
 ![](https://raw.githubusercontent.com/Sysnomid/benford.py/main/plots/russell2000.png)
 
