@@ -1,6 +1,5 @@
 import pandas as pd
 import math
-import sys
 from plot import plot 
 
 df = pd.read_csv("data/country-population.csv", usecols=['Population (2020)'])
@@ -26,4 +25,4 @@ for i in range(1, 10):
     bfd_log = (math.log10(i + 1) - math.log10(i)) * 100 
     bfd_natural.append(str(round(bfd_log, 2)).split())
 
-plot(bfd_natural, bfd_occurences, "Population", "Population", "population.png")
+plot(bfd_natural, bfd_occurences, "World Population by Country", "Population", "population.png")
