@@ -27,8 +27,7 @@ For example, if you want a plot of Benford's law in world population data run `p
 - pandas
 - numpy
 			
-### Plots
- 
+### Plots 
  
 ![](https://raw.githubusercontent.com/Sysnomid/benford.py/main/plots/population.png)
 
