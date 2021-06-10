@@ -25,4 +25,4 @@ for i in range(1, 10):
     bfd_log = (math.log10(i + 1) - math.log10(i)) * 100 
     bfd_natural.append(str(round(bfd_log, 2)).split())
 
-plot(bfd_natural, bfd_occurences, "2020 Land Area by Country", "Land Area", "area.png")
+plot(bfd_natural, bfd_occurences, "2020 World Land Area", "Land Area", "area.png")
