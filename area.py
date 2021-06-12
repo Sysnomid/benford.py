@@ -9,7 +9,7 @@ bfd_occurences = []
 bfd_natural = []
 
 for index, row in df.iterrows():
-    # Fetch data from 'Population (2020)' column in CSV column, and cast it to an int type
+    # Fetch data from 'Land Area' column in CSV column, and cast it to an int type
     pop_data = df['Land Area (Km²)'][index].astype(int)
    
     # Leading digit finder
